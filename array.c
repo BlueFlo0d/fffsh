@@ -75,6 +75,9 @@ void fffArrayPushOne(FffArray *arr, char achar){
         expand(arr,1);
         *(arr->content+position)=achar;
 }
+void fffArrayExpand(FffArray *arr, size_t deltaLen){
+        expand(arr, deltaLen);
+}
 FffArray *rootObj = NULL;
 FffArray *headObj = NULL;
 void reinitMem(FffArray *arr){

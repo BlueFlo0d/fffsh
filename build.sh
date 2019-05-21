@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 srcnames () {
     srcfiles=$(ls $1/*.c)
     for src in $srcfiles

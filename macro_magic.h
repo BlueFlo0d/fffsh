@@ -21,4 +21,10 @@
 // Example Usage:
 // #define MY_LIST (x)(y)(z)(LIST_END) // Make a list by enclosing each element in brackets. End with LIST_END
 // #define MLISTMAP_FUNC(x) x, // Define the function that you want to apply to each element
-// MLISTMAP(L) //  ---Expand to---> x, y, z,
+// MLISTMAP(MY_LIST) //  ---Expand to---> x, y, z,
+
+// Some more: Multiple arguments
+// #define MY_LIST ((x,1))((y,2))((z,3))(LIST_END)
+// #define MLISTMAP_APPLIED(x,y) x, // The actual funtion
+// #define MLISTMAP_FUNC(x) MLISTMAP_APPLIED x // Strip a layer of brackets
+// MLISTMAP(MY_LIST)  ---Expand to---> x, y, z,

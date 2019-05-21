@@ -7,6 +7,7 @@ typedef struct FffArray_{
         struct FffArray_ *objRingPrev;
         char *content;
 } FffArray;
+void fffArrayExpand(FffArray *arr, size_t deltaLen);
 void fffArrayPush(FffArray *arr, char *string, size_t len);
 void fffArrayPushOne(FffArray *arr, char achar);
 void fffArrayInit(FffArray *arr);
